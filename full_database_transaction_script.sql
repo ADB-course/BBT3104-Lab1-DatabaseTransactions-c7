@@ -12,12 +12,12 @@ INSERT INTO orders(orderNumber,
                    shippedDate,
                    status,
                    customerNumber)
-VALUES(@orderNumber,
-       DATE(NOW()),
-       DATE(DATE_ADD(NOW(), INTERVAL 3 DAY)),
-       DATE(DATE_ADD(NOW(), INTERVAL 2 DAY)),
-       'In Process',
-        145);
+        VALUES(@orderNumber,
+                DATE(NOW()),
+                DATE(DATE_ADD(NOW(), INTERVAL 3 DAY)),
+                DATE(DATE_ADD(NOW(), INTERVAL 2 DAY)),
+                'In Process',
+                        145);
 
 SAVEPOINT before_product_1;
 
@@ -49,7 +49,7 @@ SET @quantityInStock = (SELECT quantityInStock FROM products WHERE `productCode`
 UPDATE `products` SET `quantityInStock` = @quantityInStock - 68 WHERE `productCode` = 'S12_1099';
 
 INSERT INTO payments
-(customerNumber, checkNumber, paymentDate, amount)
+(customerNumber, checkNumber, paymentDate, amount)4
 VALUES (145, 'JM555210', DATE(NOW()), 12000);
 
 COMMIT;

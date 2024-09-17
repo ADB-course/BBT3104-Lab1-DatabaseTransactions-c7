@@ -31,7 +31,7 @@ services:
       - 8080:80
     environment:
       - MYSQL_ROOT_PASSWORD=5trathm0re
-      - MYSQL_USER=student
+      - MYSQL_USER=student 
       - MYSQL_PASSWORD=5trathm0re
       - PMA_HOST=mysql-8.3.0-bbt3104
       - PMA_PORT=3306
