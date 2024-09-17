@@ -87,4 +87,7 @@ Step17: INSERT a payment record with:
 Step17: COMMIT Transaction; 
 
 Step18: End/Close Transaction. 
+
+
 ## Support for the Sales Departments' Report
+In the payment table, insert new  column for Total Cost. To retrieve the report, you use a select query to retrieve rows where amount paid is less than total cost and also add a row for totalCost – amount.
